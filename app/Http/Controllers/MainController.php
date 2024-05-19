@@ -90,19 +90,19 @@ class MainController extends Controller
 
         #rule 8 - 11
         if($urgensi == "tidak perlu" && $strategi == "umum") {
-            $rekomendasi = "tidak perlu alat";
+            $rekomendasi = "Tidak perlu alat";
             $cfrule = 0.8;
             $cfrekomendasi = min($cfurgensi, $cfstrategi, 1) * $cfrule;
         }
 
         if($urgensi == "tidak perlu" && $strategi == "spesifik") {
-            $rekomendasi = "alat pemberi makan otomatis";
+            $rekomendasi = "Alat pemberi makan otomatis";
             $cfrule = 0.85;
             $cfrekomendasi = min($cfurgensi, $cfstrategi, 1) * $cfrule;
         }
 
         if($urgensi == "sedikit" && $strategi == "umum") {
-            $rekomendasi = "sistem pompa air";
+            $rekomendasi = "Sistem pompa air";
             $cfrule = 0.85;
             $cfrekomendasi = min($cfurgensi, $cfstrategi, 1) * $cfrule;
         }
@@ -115,7 +115,7 @@ class MainController extends Controller
 
         #rule 12 - 17
         if($urgensi == "perlu" && $strategi == "umum" && $data['budget_tahunan'] == "rendah") {
-            $rekomendasi = "sistem pompa air";
+            $rekomendasi = "Sistem pompa air";
             $cfrule = 0.9;
             $cfrekomendasi = min($cfurgensi, $cfstrategi, 1) * $cfrule;
         }
